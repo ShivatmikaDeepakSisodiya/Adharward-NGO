@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adharwad-Bedridden & Critical Care Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+
+
+    <style>
+     
+    </style>
+</head>
+<section>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Logo" style="height: 40px;">
+        </a>
+
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse me-2" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item navitm">
+                    <a class="nav-link" href="aboutus.html">AboutUs</a>
+                </li>
+                <li class="nav-item dropdown navv-dropdown-menu navitm">
+                    <a class="nav-link dropdown-toggle " href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu "  aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="bedridden.html">Bedridden & Critical Care Centre</a></li>
+                        <li><a class="dropdown-item" href="assistedliving.html">Assisted Living Center</a></li>
+                        <li><a class="dropdown-item" href="adultdaycare.html">Adult Day Care Center</a></li>
+                        <li><a class="dropdown-item" href="empoweringwomen.html">Empowering Destitute Women</a></li>
+                        <li><a class="dropdown-item" href="education.html">Educational & Medical Support for Children</a></li>
+                        <li><a class="dropdown-item" href="ngo.html">NGO for Physically Challenged</a></li>
+                        <li><a class="dropdown-item" href="oldagehome.html">Old Age Home for Elderly</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown navv-dropdown-menu navitm">
+                    <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Media
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mediaDropdown">
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item" href="event.html">Events & Gallery</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item navitm">
+                    <a class="nav-link" href="#" id="openSOSOverlay">SOS</a>
+                </li>
+                <li class="nav-item navitm">
+                    <a class="nav-link btn btn-donate text-white" href="#" id="opendonoverBtn">Donate</a>
+                </li>
+                <li class="nav-item navitm " >
+                    <a class="nav-link" href="#" id="openAccountOverlay">
+                        <i class="fa fa-user"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Donation Overlay -->
+<div class="overlay" id="donationdonover">
+    <div class="overlay-content">
+        <span class="close-overlay" id="closedonover">&times;</span>
+        <div class="section-title">Donate for the Organization!</div>
+
+        <div class="content-item">
+            <div class="item-title">Directly Bank Transfer</div>
+            <p>Account Number: 2223330000456987 <i class="fa fa-clone icon-action" data-copy="2223330000456987"></i></p>
+            <p>Beneficiary Name: Organization</p>
+            <p>IFSC Code: WRDSBIOBNKPIS <i class="fa fa-clone icon-action" data-copy="WRDSBIOBNKPIS"></i></p>
+        </div>
+
+        <div class="content-item">
+            <div class="item-title">UPI</div>
+            <p>Mobile Number: 8939406129 <i class="fa fa-clone icon-action" data-copy="8939406129"></i></p>
+            <p>UPI ID: 21551 <i class="fa fa-clone icon-action" data-copy="21551"></i></p>
+            <p>QR Code:</p>
+            <img src="qrcode.png" alt="QR Code" style="max-width: 100px;">
+        </div>
+    </div>
+</div>
+
+<!-- Account Overlay -->
+<div class="overlay" id="accountOverlay">
+    <div class="overlay-content">
+        <span class="close-overlay" id="closeAccountOverlay">&times;</span>
+        <div class="overlay-content ">
+            <h4 class="text-center">Account</h4>
+            <form>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+                <p class="text-center mt-3">New User? <a href="#" class="text-primary">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- SOS Overlay -->
+<div class="overlay" id="sosOverlay">
+    <span class="close-btn" id="closeSOSOverlay">&times;</span>
+    <div class="overlay-content">
+            <h4 class="text-center mb-4">Emergency Services</h4>
+            <div class="sos-options">
+                <a href="#"><i class="fa fa-ambulance"></i> Urgent Medical Facility</a>
+                <a href="#"><i class="fa fa-car"></i> Emergency Transport</a>
+                <a href="#"><i class="fa fa-heart"></i> Urgent Donations</a>
+            </div>
+    </div>       
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- intro image + indedx text -->
+
+<div class="introimg bg-black" style="height: 45vh;" >
+        <img src="bedriddenmain.png" alt="Image 1" style="width: 100%;">
+</div>
+
+
+
+<!-- intro vid ignore-->
+<div class="video-overlay" id="video-overlay">
+    <span class="closevid-overlay" onclick="closeVideo()"></span>
+    <video controls>
+        <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+
+
+
+
+
+
+<h1 class="centered-content headtext" style="margin-top: -200px; ">BEDRIDDEN & <br> CRITICAL CARE CENTRE </h1>
+<!-- shortcuts -->
+<div class="centered-content" style="margin-top: 24px; position: relative;" > 
+    
+    
+    <!-- Icon Box -->
+ <div class="scicon-box" style="display: flex; align-items: center; ">
+     <div class="scicon-item" id="scdonateBtn">
+         <i class="fa fa-heart"></i>
+         <span>Donate</span>
+     </div>
+     <div class="scicon-item" id="scadmissionBtn">
+         <i class="fa fa-id-card"></i>
+         <span>Admission</span>
+     </div>
+     <div class="scicon-item" id="sccontactBtn">
+         <i class="fa fa-envelope"></i>
+         <span>Contact</span>
+     </div>
+     <div class="scicon-item" id="screviewBtn">
+         <i class="fa fa-comments"></i>
+         <span>Review</span>
+     </div>
+ </div>
+ 
+ <!-- Donation Overlay -->
+ <div class="scoverlay" id="scdonateOverlay" onclick="sccloseOverlay(event)">
+     <div class="scoverlay-content scqr-code" onclick="event.stopPropagation();">
+         <span class="scclose-btn" onclick="sccloseDonateOverlay()">&times;</span>
+         <h3>Account ID: 1234567890</h3>
+         <p>Bank Holder: John Doe</p>
+         <p>Account ID: 1234567890</p>
+         <img src="qrcode.png" alt="QR Code">
+     </div>
+ </div>
+ 
+ <!-- Admission Form Overlay -->
+ <div class="scoverlay" id="scadmissionOverlay" onclick="sccloseOverlay(event)">
+     <div class="scoverlay-content" onclick="event.stopPropagation();">
+         <span class="scclose-btn" onclick="sccloseAdmissionOverlay()">&times;</span>
+         <h4>Care Home Admission Form</h4>
+         <form>
+             <div class="scform-group">
+                 <label>Name</label>
+                 <input type="text" class="form-control" placeholder="Enter Name">
+             </div>
+             <div class="scform-group">
+                 <label>Age</label>
+                 <input type="number" class="form-control" placeholder="Enter Age">
+             </div>
+             <div class="scform-group">
+                 <label>Service Required</label>
+                 <select class="form-control">
+                     <option>Old Age Home</option>
+                     <option>Critical Care</option>
+                 </select>
+             </div>
+             <div class="scform-group">
+                 <label>Add Photograph</label>
+                 <input type="file" class="form-control">
+             </div>
+             <div class="scform-group">
+                 <label>Requirements</label>
+                 <textarea class="form-control" rows="3"></textarea>
+             </div>
+             <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+     </div>
+ </div>
+ 
+ <!-- Contact Overlay -->
+ <div class="scoverlay" id="sccontactOverlay" onclick="sccloseOverlay(event)">
+     <div class="scoverlay-content" onclick="event.stopPropagation();">
+         <span class="scclose-btn" onclick="sccloseContactOverlay()">&times;</span>
+         <h4 class="mb-4">Contact Us</h4>
+         <div class="d-flex justify-content-center text-center">
+             <div class="p-3 mx-2" style="background-color: #ff9f43; border-radius: 10px; width: 120px; color: white;">
+                 <i class="fa fa-phone fa-2x mb-2"></i>
+                 <div>Call</div>
+             </div>
+             <div class="p-3 mx-2" style="background-color: #1abc9c; border-radius: 10px; width: 120px; color: white;">
+                 <i class="fa fa-comment fa-2x mb-2"></i>
+                 <div>SMS</div>
+             </div>
+             <div class="p-3 mx-2" style="background-color: #25d366; border-radius: 10px; width: 120px; color: white;">
+                 <i class="fa fa-whatsapp fa-2x mb-2"></i>
+                 <div>WhatsApp</div>
+             </div>
+             <div class="p-3 mx-2" style="background-color: #ea4335; border-radius: 10px; width: 120px; color: white;">
+                 <i class="fa fa-envelope fa-2x mb-2"></i>
+                 <div>Gmail</div>
+             </div>
+         </div>
+     </div>
+ </div>
+ 
+ 
+ <!-- review Overlay -->
+ <div class="scroverlay" id="screviewOverlay">
+     <div class="scclose-btn" id="sccloseOverlay">&times;</div>
+     <div class="scroverlay-content">
+         <h2 style="color: orange;">Reviews</h2>
+         <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+             <!-- Indicators -->
+             <div class="carousel-indicators">
+                 <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active"></button>
+                 <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1"></button>
+                 <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2"></button>
+             </div>
+ 
+             <!-- Carousel Items -->
+             <div class="carousel-inner">
+                 <!-- Review 1 -->
+                 <div class="carousel-item active">
+                     <p class="screview-quote">
+                         My father spent his golden years at Adharwad, and we couldn’t have been more pleased. The staff was incredibly caring and attentive.
+                     </p>
+                     <div class="screview-author">Sandeep Prajapati</div>
+                     <div class="screview-author-subtitle">ABC Softwares</div>
+                 </div>
+ 
+                 <!-- Review 2 -->
+                 <div class="carousel-item">
+                     <p class="screview-quote">
+                         Adharwad exceeded all expectations when it came to caring for my mother. I will always be grateful for their kindness.
+                     </p>
+                     <div class="screview-author">Nisha Sharma</div>
+                     <div class="screview-author-subtitle">XYZ Technologies</div>
+                 </div>
+ 
+                 <!-- Review 3 -->
+                 <div class="carousel-item">
+                     <p class="screview-quote">
+                         I am so glad we found Adharwad for my uncle. Their dedication and excellent facilities offer a home-like experience.
+                     </p>
+                     <div class="screview-author">Ramesh Kumar</div>
+                     <div class="screview-author-subtitle">PQR Corp</div>
+                 </div>
+             </div>
+ 
+             <!-- Controls -->
+             <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+                 <span class="carousel-control-prev-icon"></span>
+                 <span class="visually-hidden">Previous</span>
+             </button>
+             <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+                 <span class="carousel-control-next-icon"></span>
+                 <span class="visually-hidden">Next</span>
+             </button>
+         </div>
+     </div>
+ </div>
+ 
+ 
+ 
+ </div>
+
+
+
+
+
+
+<br> <br><br> 
+  <!-- service text+image -->
+  <div class="container centered-content "   >    
+    <div class="ti-section  " >
+      <!-- Text Section -->
+      <div class="ti-text">
+        <h1>Bedridden and Critical Care Centre in Mumbai
+        </h1>
+        <p id="moreText">
+            The Adharwad Bedridden & Critical Care Center dedicates itself to providing specialized nursing care for individuals who are bedridden or in critical condition. Our facility boasts a team of on-call doctors, nurses, and physiotherapists available round-the-clock to respond to emergencies and deliver immediate medical attention. Our priority remains ensuring the comfort, safety, and well-being of our patients, particularly those necessitating intensive care and monitoring. Adharwad’s trained medical staff excels at managing various medical conditions and administering necessary treatments, including wound care, medication management, and rehabilitation services. Additionally, our center boasts advanced medical equipment and technology, including oxygen concentrators, ECG machines, and nebulisers, to effectively support critical care needs. We understand the importance of timely intervention and personalised care, and we are commit to provide compassionate and comprehensive services to those in need. At Adharwad Critical Care Center, we strive to offer a supportive and healing environment where residents and their families can find comfort and peace of mind during challenging times.
+
+        </p>
+        <button class="btn tibtn-toggle" id="toggleButton" onclick="toggleText()">
+          Load More
+        </button>
+      </div>
+
+      <!-- Image Section -->
+      <div class="ti-image">
+        <img src="bedriddensmall.jpg" alt="Group of children smiling" >
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+<br> <br><br> 
+ <!-- Donation Section -->
+ <section class="qt-donation-section d-flex align-items-center">
+    <div class="qt-donation-container">
+        <!-- Title -->
+        <h1 class="qt-donation-title">
+            Our Success
+        </h1>
+        <!-- Description -->
+        <p class="qt-donation-text">
+            Adharwad Old Age Home, a beacon of hope for the elderly, has been transforming lives with unwavering dedication and community support. This haven provides not just shelter, but a sense of belonging and purpose for those in need. With your generous contribution, you can empower Adharwad to continue its compassionate work, ensuring that every senior citizen receives the care, dignity, and love they deserve. Your support will directly impact the lives of countless individuals, making a lasting difference in their golden years. Join us in making Adharwad a home where every senior feels valued and cherished.
+        </p>
+        <!-- Donate Button -->
+        <a href="#" class="btn qt-donate-btn" id="qt-open-overlay">Donate</a>
+    </div>
+</section>
+
+<!-- Overlay -->
+<div class="qt-overlay" id="qt-overlay">
+    <div class="qt-overlay-content">
+        <h3>Account ID: 1234567890</h3>
+        <p>Account ID: 1234567890</p>
+        <img src="https://via.placeholder.com/150" alt="QR Code" class="qt-qr-code"> <!-- Placeholder QR Code -->
+        <div class="qt-close" id="qt-close-overlay"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- tracker -->
+<div class="trackers-container">
+    
+    <div class="tracker-box">
+        <i class="fa fa-thermometer"></i>
+        <div class="tracker-number" data-target="45">0</div>
+        <div class="tracker-title">Current Patients </div>
+    </div>
+    <div class="tracker-box">
+        <i class="fa fa-thumbs-up"></i>
+        <div class="tracker-number" data-target="30">0</div>
+        <div class="tracker-title">Patients Showing Recovery Progress</div>
+    </div>
+    <div class="tracker-box">
+        <i class="fa fa-users"></i>
+        <div class="tracker-number" data-target="20">0</div>
+        <div class="tracker-title">Recently Discharged Patients</div>
+    </div>
+    <div class="tracker-box">
+        <i class="fa fa-exclamation-triangle"></i> <!-- Updated Icon for Women Empowered -->
+        <div class="tracker-number" data-target="16">0</div>
+        <div class="tracker-title">Urgent Cases</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+  <br> <br><br> 
+  <!-- job apply -->
+  <div class="centered-content " style="margin-left: 10%; margin-right: 10%;">
+    <div class="container-fluid  " >
+       <h1 class="apl-title ms-0">Opportunities</h1>
+       <div class="row g-3" >
+           <div class="col-md-4">
+               <div class="apl-job-card">
+                   <div class="apl-icon">
+                       <i class="fa fa-briefcase"></i>
+                   </div>
+                   <h5>Volunteers</h5>
+                   <p>We are seeking a compassionate and skilled Staff Nurse to join our team at Adharwad.</p>
+               </div>
+           </div>
+           <div class="col-md-4">
+               <div class="apl-job-card">
+                   <div class="apl-icon">
+                       <i class="fa fa-briefcase"></i>
+                   </div>
+                   <h5>Account</h5>
+                   <p>We are seeking a skilled and experienced Accountant to join our team at Adharwad.</p>
+               </div>
+           </div>
+           <div class="col-md-4">
+               <div class="apl-job-card">
+                   <div class="apl-icon">
+                       <i class="fa fa-briefcase"></i>
+                   </div>
+                   <h5>Chef</h5>
+                   <p>We are seeking a talented and experienced Chef to join our culinary team at Adharwad.</p>
+               </div>
+           </div>
+       </div>
+       <br>
+       <div class="apl-apply-btn-container" >
+           <button class="apl-apply-button " id="apl-applyButton">Apply</button>
+       </div>
+    </div>
+   </div>
+
+<!-- Overlay for Category Selection -->
+<div class="apl-overlay" id="apl-categoryOverlay">
+    <div class="apl-overlay-content">
+        <h4>Select a Category</h4>
+        <button class="apl-category-button" data-category="nurse">Nurse</button>
+        <button class="apl-category-button" data-category="accountant">Accountant</button>
+        <button class="apl-category-button" data-category="chef">Chef</button>
+    </div>
+</div>
+
+<!-- Overlay for Form -->
+<div class="apl-overlay" id="apl-formOverlay">
+    <div class="apl-overlay-content">
+        <span class="apl-back-arrow" id="apl-backArrow">&larr; Back</span>
+        <h4>Application Form</h4>
+        <form>
+            <input type="text" class="apl-form-control form-control" placeholder="Full Name" required>
+            <input type="email" class="apl-form-control form-control" placeholder="Email Address" required>
+            <input type="text" class="apl-form-control form-control" placeholder="Phone Number" required>
+            <textarea class="apl-form-control form-control" placeholder="Why are you a good fit?" rows="4" required></textarea>
+            <button type="submit" class="apl-apply-button">Submit Application</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<br><br><br><br>
+  <!-- footer -->
+<footer id="footer" class="footer-1">
+
+    <div class="main-footer widgets-dark typo-light">
+    <div class="container">
+    <div class="row " style="margin-top: 5vh; ;">
+
+
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        
+    <div class="widget subscribe no-box">
+     <img src="logo.png" style="height: 5.5vh;">  <br> <span></span>
+    <br>
+     <p>Adharwad Niradhar & 
+    Apang Mahila Utkarsh 
+    Trust </p>
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3" style="padding-left: 7%;">
+    <div class="widget no-box">
+    <h5 class="widget-title">Quick Links</h5>
+    <br>
+    <ul class="thumbnail-widget">
+    <li>
+    <div class="thumb-content"><a href="aboutus.html">About Us</a></div>	
+    </li>
+    <li>
+    <div class="thumb-content"><a href="blog.html">Blogs</a></div>	
+    </li>
+    <li>
+    <div class="thumb-content"><a href="event.html">Events </a></div>	
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#">Success Stories</a></div>	
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#">Careers</a></div>	
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#.">SOS</a></div>	
+    </li>
+    
+    </ul>
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="widget no-box">
+    <h5 class="widget-title">Get Started</h5>
+    <br>
+    <p>Get access to your full Training and Marketing Suite.</p>
+    <a class="btn" href="" target="_blank">Donate Now</a>
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    
+    <div class="widget no-box">
+    <h5 class="widget-title">Contact Us</h5>
+    <br>
+    
+    <p><a href="https://maps.app.goo.gl/46iX1qpekhqdEFA18?g_st=iw" title="Adharwad">Plot No 20, Sector 1,
+    Kopar Khairane, 
+    Navi Mumbai - 400709,
+    Behind Terna International School</a></p>
+    <ul class="social">
+    <li class=""><a class="ease-all" href="https://www.instagram.com/miss_colourpalette/?hl=en"><i class="fa fa-facebook linktree"></i></a></li>
+    <li class=""><a class="ease-all" href="https://www.instagram.com/miss_colourpalette/?hl=en"><i class="fa fa-twitter linktree" ></i></a></li>
+    <li class=""><a class="ease-all" href="https://www.instagram.com/miss_colourpalette/?hl=en"><i class="fa fa-instagram linktree"></i></a></li>
+    <li class=""><a class="ease-all" href="https://www.instagram.com/miss_colourpalette/?hl=en"><i class="fa fa-google-plus linktree"></i></a></li>
+
+    </ul>
+    </div>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+      
+    <div class="footer-copyright">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12 text-center">
+    <p>Copyright Company Name © 2022. All rights reserved.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
+
+
+
+
+   
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

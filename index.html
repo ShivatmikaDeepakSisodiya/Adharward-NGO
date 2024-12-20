@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adharwad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+
+
+    <style>
+     
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Logo" style="height: 40px;">
+        </a>
+
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse me-2" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item navitm">
+                    <a class="nav-link" href="aboutus.html">AboutUs</a>
+                </li>
+                <li class="nav-item dropdown navv-dropdown-menu navitm">
+                    <a class="nav-link dropdown-toggle " href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu "  aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="bedridden.html">Bedridden & Critical Care Centre</a></li>
+                        <li><a class="dropdown-item" href="assistedliving.html">Assisted Living Center</a></li>
+                        <li><a class="dropdown-item" href="adultdaycare.html">Adult Day Care Center</a></li>
+                        <li><a class="dropdown-item" href="empoweringwomen.html">Empowering Destitute Women</a></li>
+                        <li><a class="dropdown-item" href="education.html">Educational & Medical Support for Children</a></li>
+                        <li><a class="dropdown-item" href="ngo.html">NGO for Physically Challenged</a></li>
+                        <li><a class="dropdown-item" href="oldagehome.html">Old Age Home for Elderly</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown navv-dropdown-menu navitm">
+                    <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Media
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mediaDropdown">
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                        <li><a class="dropdown-item" href="event.html">Events & Gallery</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item navitm">
+                    <a class="nav-link" href="#" id="openSOSOverlay">SOS</a>
+                </li>
+                <li class="nav-item navitm">
+                    <a class="nav-link btn btn-donate text-white" href="#" id="opendonoverBtn">Donate</a>
+                </li>
+                <li class="nav-item navitm " >
+                    <a class="nav-link" href="#" id="openAccountOverlay">
+                        <i class="fa fa-user"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Donation Overlay -->
+<div class="overlay" id="donationdonover">
+    <div class="overlay-content">
+        <span class="close-overlay" id="closedonover">&times;</span>
+        <div class="section-title">Donate for the Organization!</div>
+
+        <div class="content-item">
+            <div class="item-title">Directly Bank Transfer</div>
+            <p>Account Number: 2223330000456987 <i class="fa fa-clone icon-action" data-copy="2223330000456987"></i></p>
+            <p>Beneficiary Name: Organization</p>
+            <p>IFSC Code: WRDSBIOBNKPIS <i class="fa fa-clone icon-action" data-copy="WRDSBIOBNKPIS"></i></p>
+        </div>
+
+        <div class="content-item">
+            <div class="item-title">UPI</div>
+            <p>Mobile Number: 8939406129 <i class="fa fa-clone icon-action" data-copy="8939406129"></i></p>
+            <p>UPI ID: 21551 <i class="fa fa-clone icon-action" data-copy="21551"></i></p>
+            <p>QR Code:</p>
+            <img src="qrcode.png" alt="QR Code" style="max-width: 100px;">
+        </div>
+    </div>
+</div>
+
+<!-- Account Overlay -->
+<div class="overlay" id="accountOverlay">
+    <div class="overlay-content">
+        <span class="close-overlay" id="closeAccountOverlay">&times;</span>
+        <div class="overlay-content ">
+            <h4 class="text-center">Account</h4>
+            <form>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+                <p class="text-center mt-3">New User? <a href="#" class="text-primary">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- SOS Overlay -->
+<div class="overlay" id="sosOverlay">
+    <span class="close-btn" id="closeSOSOverlay">&times;</span>
+    <div class="overlay-content">
+            <h4 class="text-center mb-4">Emergency Services</h4>
+            <div class="sos-options">
+                <a href="#"><i class="fa fa-ambulance"></i> Urgent Medical Facility</a>
+                <a href="#"><i class="fa fa-car"></i> Emergency Transport</a>
+                <a href="#"><i class="fa fa-heart"></i> Urgent Donations</a>
+            </div>
+    </div>       
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- intro image + indedx text -->
+
+<div class="introimg bg-black" style="height: 45vh;" >
+    <div class="introimg-images" >
+        <img src="indexmain.png" alt="Image 1" style="width: 100%;">
+    </div>
+
+
+<!-- intro text -->
+
+    <div class="home-cintroimg-text ">
+        <h1 class="pt-5">Inclusive care for elderly people</h1>
+        <p>Adharwad offers a warm, nurturing home for senior citizens, combined with top-notch healthcare and hygienic facilities. We are committed to providing exceptional care for bedridden patients in Mumbai.</p>
+        <br> <br> <br> 
+        
+        <button class="video-btn" onclick="playVideo()">  <i class="fa fa-play "></i>  Watch what we do?</button>
+        
+        <div class="sntrono ">
+            
+            <div class="ntrono-item">
+                <span>15000</span> Elderly Benefited
+            </div>
+            <div class="ntrono-item">
+                <span>|</span> 
+            </div>
+            <div class="ntrono-item">
+                <span>16</span> Years of Experience & Trust
+            </div>
+        </div>
+    </div>
+</div>
+<!-- intro vid -->
+<div class="video-overlay" id="video-overlay">
+    <span class="closevid-overlay" onclick="closeVideo()"></span>
+    <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+
+
+
+
+
+
+
+<!-- shortcuts -->
+<div class="centered-content"  style="margin-top: -80px; position: relative;"> 
+   
+   <!-- Icon Box -->
+<div class="scicon-box" style="display: flex; align-items: center; ">
+    <div class="scicon-item" id="scdonateBtn">
+        <i class="fa fa-heart"></i>
+        <span>Donate</span>
+    </div>
+    <div class="scicon-item" id="scadmissionBtn">
+        <i class="fa fa-id-card"></i>
+        <span>Admission</span>
+    </div>
+    <div class="scicon-item" id="sccontactBtn">
+        <i class="fa fa-envelope"></i>
+        <span>Contact</span>
+    </div>
+    <div class="scicon-item" id="screviewBtn">
+        <i class="fa fa-comments"></i>
+        <span>Review</span>
+    </div>
+</div>
+
+<!-- Donation Overlay -->
+<div class="scoverlay" id="scdonateOverlay" onclick="sccloseOverlay(event)">
+    <div class="scoverlay-content scqr-code" onclick="event.stopPropagation();">
+        <span class="scclose-btn" onclick="sccloseDonateOverlay()">&times;</span>
+        <h3>Account ID: 1234567890</h3>
+        <p>Bank Holder: John Doe</p>
+        <p>Account ID: 1234567890</p>
+        <img src="qrcode.png" alt="QR Code">
+    </div>
+</div>
+
+<!-- Admission Form Overlay -->
+<div class="scoverlay" id="scadmissionOverlay" onclick="sccloseOverlay(event)">
+    <div class="scoverlay-content" onclick="event.stopPropagation();">
+        <span class="scclose-btn" onclick="sccloseAdmissionOverlay()">&times;</span>
+        <h4>Care Home Admission Form</h4>
+        <form>
+            <div class="scform-group">
+                <label>Name</label>
+                <input type="text" class="form-control" placeholder="Enter Name">
+            </div>
+            <div class="scform-group">
+                <label>Age</label>
+                <input type="number" class="form-control" placeholder="Enter Age">
+            </div>
+            <div class="scform-group">
+                <label>Service Required</label>
+                <select class="form-control">
+                    <option>Old Age Home</option>
+                    <option>Critical Care</option>
+                </select>
+            </div>
+            <div class="scform-group">
+                <label>Add Photograph</label>
+                <input type="file" class="form-control">
+            </div>
+            <div class="scform-group">
+                <label>Requirements</label>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Contact Overlay -->
+<div class="scoverlay" id="sccontactOverlay" onclick="sccloseOverlay(event)">
+    <div class="scoverlay-content" onclick="event.stopPropagation();">
+        <span class="scclose-btn" onclick="sccloseContactOverlay()">&times;</span>
+        <h4 class="mb-4">Contact Us</h4>
+        <div class="d-flex justify-content-center text-center">
+            <div class="p-3 mx-2" style="background-color: #ff9f43; border-radius: 10px; width: 120px; color: white;">
+                <i class="fa fa-phone fa-2x mb-2"></i>
+                <div>Call</div>
+            </div>
+            <div class="p-3 mx-2" style="background-color: #1abc9c; border-radius: 10px; width: 120px; color: white;">
+                <i class="fa fa-comment fa-2x mb-2"></i>
+                <div>SMS</div>
+            </div>
+            <div class="p-3 mx-2" style="background-color: #25d366; border-radius: 10px; width: 120px; color: white;">
+                <i class="fa fa-whatsapp fa-2x mb-2"></i>
+                <div>WhatsApp</div>
+            </div>
+            <div class="p-3 mx-2" style="background-color: #ea4335; border-radius: 10px; width: 120px; color: white;">
+                <i class="fa fa-envelope fa-2x mb-2"></i>
+                <div>Gmail</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- review Overlay -->
+<div class="scroverlay" id="screviewOverlay">
+    <div class="scclose-btn" id="sccloseOverlay">&times;</div>
+    <div class="scroverlay-content">
+        <h2 style="color: orange;">Reviews</h2>
+        <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- Carousel Items -->
+            <div class="carousel-inner">
+                <!-- Review 1 -->
+                <div class="carousel-item active">
+                    <p class="screview-quote">
+                        My father spent his golden years at Adharwad, and we couldn’t have been more pleased. The staff was incredibly caring and attentive.
+                    </p>
+                    <div class="screview-author">Sandeep Prajapati</div>
+                    <div class="screview-author-subtitle">ABC Softwares</div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="carousel-item">
+                    <p class="screview-quote">
+                        Adharwad exceeded all expectations when it came to caring for my mother. I will always be grateful for their kindness.
+                    </p>
+                    <div class="screview-author">Nisha Sharma</div>
+                    <div class="screview-author-subtitle">XYZ Technologies</div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="carousel-item">
+                    <p class="screview-quote">
+                        I am so glad we found Adharwad for my uncle. Their dedication and excellent facilities offer a home-like experience.
+                    </p>
+                    <div class="screview-author">Ramesh Kumar</div>
+                    <div class="screview-author-subtitle">PQR Corp</div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+ 
+
+
+
+<br>
+<!-- pillar -->
+<div class="centered-content  mt-0 mb-0"  style=" height: 31vh; margin-left: 10%; margin-right: 10%;  ">
+<div class=" bg-white "  style="width: 100vw; ;" >
+    <br> <br> <br> 
+    <!-- Title -->
+    <div class="pill-title">Pillars of Aadharwad</div>
+
+    
+
+    <!-- Row of Cards -->
+    <div class="row justify-content-center">
+        
+        <!-- Card 1 -->
+        <div class="col-6 col-md-3 pill-card">
+            <div class="pill-img-container">
+                <img src="pillar1.png" alt="Education">
+            </div>
+            <div class="pill-text">Change a life through education</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-6 col-md-3 pill-card">
+            <div class="pill-img-container">
+                <img src="pillar2.png" alt="Women Rehabilitation">
+            </div>
+            <div class="pill-text">Rehabilitation of destitute women</div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-6 col-md-3 pill-card">
+            <div class="pill-img-container">
+                <img src="pillar3.png" alt="Bedridden Care">
+            </div>
+            <div class="pill-text">Bedridden and Critical Care</div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-6 col-md-3 pill-card">
+            <div class="pill-img-container">
+                <img src="pillar4.png" alt="Senior Citizens">
+            </div>
+            <div class="pill-text">Home for retired senior citizens</div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br> <br><br> <br><br>
+<!-- tracker -->
+<div class="trackers-container">
+    
+    <div class="tracker-box">
+        <i class="fa fa-heartbeat"></i>
+        <div class="tracker-number" data-target="124">0</div>
+        <div class="tracker-title">Elderly Benefited</div>
+    </div>
+    <div class="tracker-box">
+        <i class="fa fa-thumbs-up"></i>
+        <div class="tracker-number" data-target="16">0</div>
+        <div class="tracker-title">Years of Experience & Trust</div>
+    </div>
+    <div class="tracker-box">
+        <i class="fa fa-users"></i>
+        <div class="tracker-number" data-target="123">0</div>
+        <div class="tracker-title">Volunteers Enrolled</div>
+    </div>
+    <div class="tracker-box">
+        <i class="fa fa-shield"></i> <!-- Updated Icon for Women Empowered -->
+        <div class="tracker-number" data-target="164">0</div>
+        <div class="tracker-title">Women Empowered</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- quote + donate -->
+<!-- Donation Section -->
+<section class="qt-donation-section d-flex align-items-center">
+    <div class="qt-donation-container">
+        <!-- Title -->
+        <h1 class="qt-donation-title">
+            Change Their World. Change Yours. This changes everything.
+        </h1>
+        <!-- Description -->
+        <p class="qt-donation-text">
+            Everyday, countless individuals face harsh realities of poverty, hunger and diseases. Your generous donation can be a lifeline, providing support. You're not investing in a better future, but also making a difference. Donate today.
+        </p>
+        <!-- Donate Button -->
+        <a href="#" class="btn qt-donate-btn" id="qt-open-overlay">Donate</a>
+    </div>
+</section>
+
+<!-- Overlay -->
+<div class="qt-overlay" id="qt-overlay">
+    <div class="qt-overlay-content">
+        <h3>Adharward Trust</h3>
+        <p>Account ID: 1234567890</p>
+        <img src="https://via.placeholder.com/150" alt="QR Code" class="qt-qr-code"> <!-- Placeholder QR Code -->
+        <div class="qt-close" id="qt-close-overlay"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<br> <br><br> <br> 
+  <!-- Media Highlights Section -->
+  <section class="mh-section">
+    <!-- Section Header -->
+    <div>
+        <h2 class="mh-header">Media Highlights</h2>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row mt-4">
+        <!-- Text Content -->
+        <div class="col-md-6">
+            <div class="mh-content">
+                <h3 class="mh-title">
+                    MID-DAY Newspaper Highlights Adharwad’s Old Age Home and approach to resident’s wellbeing
+                </h3>
+                <p class="fst-italic">
+                    Residents at Adharwad enjoy a comfortable and secure lifestyle, surrounded by compassionate caregivers. The facility's modern infrastructure and lush green surroundings create a peaceful ambiance. Adharwad strives to enhance the quality of life for its residents, fostering a sense of belonging and purpose...
+                </p>
+            </div>
+        </div>
+
+        <!-- Image Carousel with Fade Effect -->
+        <div class="col-md-6">
+            <div id="mhCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+                <!-- Carousel Inner -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="mediahighlights.png" class="mh-img" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="mediahighlight2.jpeg" class="mh-img" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="mediahighlight3.jpeg" class="mh-img" alt="Image 3">
+                    </div>
+                </div>
+
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators mh-carousel-indicators">
+                    <button type="button" data-bs-target="#mhCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mhCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#mhCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<br> <br><br> 
+  <!-- reviews -->
+  <section class="creview-section">
+    <h2 style="color: orange;">Reviews</h2>
+    <div id="creviewCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#creviewCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#creviewCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#creviewCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- Carousel Items -->
+      <div class="carousel-inner">
+        <!-- creview 1 -->
+        <div class="carousel-item active">
+          <p class="creview-quote">
+            My father spent his golden years at Adharwad, and we couldn’t have been more pleased. The staff was incredibly caring and attentive, always going the extra mile to ensure his comfort and well-being. The facility was clean, well-maintained, and filled with warmth. It was truly a home away from home.
+          </p>
+          <img src="1.png" alt="creviewer Image" class="creview-image">
+          <div class="creview-author">Sandeep Prajapati</div>
+          <div class="creview-author-subtitle">ABC Softwares</div>
+        </div>
+
+        <!-- creview 2 -->
+        <div class="carousel-item">
+          <p class="creview-quote">
+            Adharwad exceeded all expectations when it came to caring for my mother. The team created an environment of warmth and comfort, and their attention to detail made all the difference. I will always be grateful for the kindness and care they provided. It's a place of love and respect for everyone.
+          </p>
+          <img src="2.png" alt="creviewer Image" class="creview-image">
+          <div class="creview-author">Nisha Sharma</div>
+          <div class="creview-author-subtitle">XYZ Technologies</div>
+        </div>
+
+        <!-- creview 3 -->
+        <div class="carousel-item">
+          <p class="creview-quote">
+            I am so glad we found Adharwad for my uncle. Their dedication to making him comfortable and happy was incredible. From the staff’s smiling faces to their excellent facilities, Adharwad offers a home-like experience for everyone who steps through their doors. Highly recommended!
+          </p>
+          <img src="3.png" alt="creviewer Image" class="creview-image">
+          <div class="creview-author">Ramesh Kumar</div>
+          <div class="creview-author-subtitle">PQR Corp</div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#creviewCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#creviewCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+
+
+
+
+
+ 
+
+
+
+  <br> <br><br> 
+  <!-- job apply -->
+
+<div class="centered-content " style="margin-left: 10%; margin-right: 10%;">
+ <div class="container-fluid  " >
+    <h1 class="apl-title ms-0">Opportunities</h1>
+    <div class="row g-3" >
+        <div class="col-md-4">
+            <div class="apl-job-card">
+                <div class="apl-icon">
+                    <i class="fa fa-briefcase"></i>
+                </div>
+                <h5>Volunteers</h5>
+                <p>We are seeking a compassionate and skilled Staff Nurse to join our team at Adharwad.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="apl-job-card">
+                <div class="apl-icon">
+                    <i class="fa fa-briefcase"></i>
+                </div>
+                <h5>Account- 1yr Exp.</h5>
+                <p>We are seeking a skilled and experienced Accountant to join our team at Adharwad.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="apl-job-card">
+                <div class="apl-icon">
+                    <i class="fa fa-briefcase"></i>
+                </div>
+                <h5>Chef</h5>
+                <p>We are seeking a talented and experienced Chef to join our culinary team at Adharwad.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="apl-apply-btn-container" >
+        <button class="apl-apply-button " id="apl-applyButton">Apply</button>
+    </div>
+ </div>
+</div>
+  
+
+<!-- Overlay for Category Selection -->
+<div class="apl-overlay" id="apl-categoryOverlay">
+    <div class="apl-overlay-content">
+        <h4>Select a Category</h4>
+        <button class="apl-category-button" data-category="nurse">Nurse</button>
+        <button class="apl-category-button" data-category="accountant">Accountant</button>
+        <button class="apl-category-button" data-category="chef">Chef</button>
+    </div>
+</div>
+
+<!-- Overlay for Form -->
+<div class="apl-overlay" id="apl-formOverlay">
+    <div class="apl-overlay-content">
+        <span class="apl-back-arrow" id="apl-backArrow">&larr; Back</span>
+        <h4>Application Form</h4>
+        <form>
+            <input type="text" class="apl-form-control form-control" placeholder="Full Name" required>
+            <input type="email" class="apl-form-control form-control" placeholder="Email Address" required>
+            <input type="text" class="apl-form-control form-control" placeholder="Phone Number" required>
+            <textarea class="apl-form-control form-control" placeholder="Why are you a good fit?" rows="4" required></textarea>
+            <button type="submit" class="apl-apply-button">Submit Application</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<br><br><br><br>  
+<!-- footer -->
+<footer id="footer " class="footer-1">
+
+    <div class="main-footer widgets-dark typo-light">
+    <div class="container">
+    <div class="row " style="margin-top: 5vh;">
+
+
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        
+    <div class="widget subscribe no-box">
+     <img src="logo.png" style="height: 5.5vh;">  <br> <span></span>
+    <br>
+     <p>Adharwad Niradhar & 
+    Apang Mahila Utkarsh 
+    Trust </p>
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3" style="padding-left: 7%;">
+    <div class="widget no-box">
+    <h5 class="widget-title">Quick Links</h5>
+    <br>
+    <ul class="thumbnail-widget">
+    <li>
+    <div class="thumb-content"><a href="aboutus.html">About Us</a></div>	
+    </li>
+    <li>
+    <div class="thumb-content"><a href="blog.html">Blogs</a></div>	
+    </li>
+    <li>
+    <div class="thumb-content"><a href="event.html">Events </a></div>	
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#">Success Stories</a></div>	
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#">Careers</a></div>	
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#.">SOS</a></div>	
+    </li>
+    
+    </ul>
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="widget no-box">
+    <h5 class="widget-title">Get Started</h5>
+    <br>
+    <p>Get access to your full Training and Marketing Suite.</p>
+    <a class="btn" href="" target="_blank">Donate Now</a>
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    
+    <div class="widget no-box">
+    <h5 class="widget-title">Contact Us</h5>
+    <br>
+    
+    <p><a href="https://maps.app.goo.gl/46iX1qpekhqdEFA18?g_st=iw" title="Adharwad">Plot No 20, Sector 1,
+    Kopar Khairane, 
+    Navi Mumbai - 400709,
+    Behind Terna International School</a></p>
+    <ul class="social ">
+    <li class=""><a class="ease-all" href="https://www.instagram.com/miss_colourpalette/?hl=en"><i class="fa fa-facebook linktree"></i></a></li>
+    <li class=""><a class="ease-all" href="https://www.instagram.com/miss_colourpalette/?hl=en"><i class="fa fa-twitter linktree" ></i></a></li>
+    <li class=""><a class="ease-all" href="https://www.instagram.com/miss_colourpalette/?hl=en"><i class="fa fa-instagram linktree"></i></a></li>
+    <li class=""><a class="ease-all" href="https://www.instagram.com/miss_colourpalette/?hl=en"><i class="fa fa-google-plus linktree"></i></a></li>
+
+    </ul>
+    </div>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+      
+    <div class="footer-copyright">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12 text-center">
+    <p>Copyright Company Name © 2022. All rights reserved.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
+
+
+
+
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
